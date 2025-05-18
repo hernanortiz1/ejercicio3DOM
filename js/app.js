@@ -11,7 +11,6 @@ const agregarTarea = (e) => {
   const inputTarea = document.getElementById("tareaInput").value;
 
   const lista = document.querySelector(".list-group");
-
   const li = document.createElement("li");
   li.textContent = inputTarea;
   li.classList.add("list-group-item");
