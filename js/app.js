@@ -11,14 +11,13 @@ const agregarTarea = (e) => {
   const inputTarea = document.getElementById("tareaInput").value;
 
   const lista = document.querySelector(".list-group");
-
   const li = document.createElement("li");
   li.textContent = inputTarea;
   li.classList.add("list-group-item");
 
   const btnEliminar = document.createElement("button");
   btnEliminar.textContent = "Eliminar";
-  btnEliminar.classList.add("btn", "btn-danger", "btn-sm", "ms-2");
+  btnEliminar.classList.add("btn", "btn-outline-danger", "ms-2");
   btnEliminar.addEventListener("click", borrarElemento);
 
   li.appendChild(btnEliminar);
