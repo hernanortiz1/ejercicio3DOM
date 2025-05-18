@@ -1,3 +1,9 @@
+const borrarElemento = (e) => {
+  e.preventDefault();
+  const li = e.target.parentElement;
+  li.remove();
+};
+
 const agregarTarea = (e) => {
   e.preventDefault();
   console.log("agregar tarea");
@@ -10,6 +16,12 @@ const agregarTarea = (e) => {
   li.textContent = inputTarea;
   li.classList.add("list-group-item");
 
+  const btnEliminar = document.createElement("button");
+  btnEliminar.textContent = "Eliminar";
+  btnEliminar.classList.add("btn", "btn-danger", "btn-sm", "ms-2");
+  btnEliminar.addEventListener("click", borrarElemento);
+
+  li.appendChild(btnEliminar);
   lista.appendChild(li);
 
   formularioTarea.reset();
