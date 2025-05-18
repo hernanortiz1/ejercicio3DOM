@@ -18,7 +18,7 @@ const agregarTarea = (e) => {
 
   const btnEliminar = document.createElement("button");
   btnEliminar.textContent = "Eliminar";
-  btnEliminar.classList.add("btn", "btn-danger", "btn-sm", "ms-2");
+  btnEliminar.classList.add("btn", "btn-outline-danger", "ms-2");
   btnEliminar.addEventListener("click", borrarElemento);
 
   li.appendChild(btnEliminar);
